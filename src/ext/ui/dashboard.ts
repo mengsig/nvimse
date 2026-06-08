@@ -49,13 +49,15 @@ function render(): void {
   const chats = chatStore.all();
   const sels = selectionStore.all();
   const running = [...chats, ...sels].filter((s) => s.busy).length;
+  const selTitle = (s: typeof sels[number]) =>
+    s.title || (s.selection ? `${s.selection.path}:${s.selection.line1}-${s.selection.line2}` : `selection #${s.id}`);
   const chatRows = chats
     .slice(0, 20)
-    .map((c) => `<div class="row" onclick="post({type:'openChat',id:${c.id}})"><span class="dot ${c.busy ? "run" : ""}"></span>${escapeHtml(c.title)} <span class="meta">${c.provider}</span></div>`)
+    .map((c) => `<div class="row" onclick="post({type:'openChat',id:${c.id}})"><span class="dot ${c.busy ? "run" : ""}"></span>${escapeHtml(c.title || `Chat #${c.id}`)} <span class="meta">${c.provider}</span></div>`)
     .join("");
   const selRows = sels
     .slice(0, 24)
-    .map((s) => `<div class="row" onclick="post({type:'openSelection',id:${s.id}})"><span class="dot ${s.busy ? "run" : ""}"></span>${escapeHtml(s.title)} <span class="meta">${s.mode} · ${s.provider}</span></div>`)
+    .map((s) => `<div class="row" onclick="post({type:'openSelection',id:${s.id}})"><span class="dot ${s.busy ? "run" : ""}"></span>${escapeHtml(selTitle(s))} <span class="meta">${s.mode} · ${s.provider}</span></div>`)
     .join("");
 
   const headerHtml = `<header style="padding:14px 18px;border-bottom:1px solid #2f334d;">

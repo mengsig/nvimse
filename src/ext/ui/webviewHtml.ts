@@ -1,6 +1,6 @@
 // Shared webview HTML scaffold — Tokyo-Night-Moon palette, transcript + prompt.
 export function escapeHtml(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  return String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
 // Shared chrome for the simple command panels (plan / bigchange / dashboard):
