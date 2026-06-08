@@ -62,27 +62,27 @@ Then load the folder as an extension (F5 in the Extension Development Host, or p
 
 Everything is under the `nvimse:` command palette prefix.
 
-| Command | What it does |
-|---|---|
-| `nvimse: Command Center` | dashboard — sessions, running state, action rows |
-| `nvimse: Chat Conversations` | general review/docs chat (one webview per conversation) |
-| `nvimse: Ask About Selection / Function` | read-only Q&A on the selection or enclosing symbol |
-| `nvimse: Edit Selection / Function` | reviewed patch for one range |
-| `nvimse: Quick Fix` | minimal no-tools patch worker |
-| `nvimse: Accept / Reject Diff Block` | resolve the inline diff, block by block (force variants override conflicts) |
-| `nvimse: Accept All / Reject All` | bulk resolve |
-| `nvimse: Open Diff Review Workspace` | two-pane native diff (proposed ⟷ live) |
-| `nvimse: Plans` / `New Plan` | draft + execute structured plans step-by-step |
-| `nvimse: Big Change` | autonomous feature build + forced-comprehension review |
-| `nvimse: Recap Changes` | reverse "explain my git diff" into a `plan.md` narrative |
-| `nvimse: PR Sidecar` | render `.nvime/pr.md` — reviewer-facing AI-attribution summary |
-| `nvimse: Token + Cost Usage` | per-lane / per-day usage and cost |
-| `nvimse: Show Attribution for Line` | which plan/step/provider authored the line under the cursor |
-| `nvimse: Git Hooks` | install/uninstall the `prepare-commit-msg` co-author hook |
-| `nvimse: Policy Rules` | per-path lane rules (`.nvime/policy.json`) |
-| `nvimse: MCP Servers` | manage the merged MCP config + the bundled self-server |
-| `nvimse: Check Health` | provider executables, git root, plans, guard events |
-| `nvimse: Cancel / Disable / Enable` | operational controls |
+| Command | What it does | Keybinding |
+|---|---|---|
+| `nvimse: Command Center` | dashboard — sessions, running state, action rows | `ctrl+k space` |
+| `nvimse: Chat Conversations` | general review/docs chat (one webview per conversation) | `ctrl+k ctrl+c` |
+| `nvimse: Ask About Selection / Function` | read-only Q&A on the selection or enclosing symbol | `ctrl+k ctrl+a` |
+| `nvimse: Edit Selection / Function` | reviewed patch for one range | `ctrl+k ctrl+e` |
+| `nvimse: Quick Fix` | minimal no-tools patch worker | `ctrl+k ctrl+f` |
+| `nvimse: Accept / Reject Diff Block` | resolve the inline diff, block by block (force variants override conflicts) | `ctrl+k a` / `ctrl+k r` |
+| `nvimse: Accept All / Reject All` | bulk resolve | `ctrl+k shift+a` / `ctrl+k shift+r` |
+| `nvimse: Open Diff Review Workspace` | two-pane native diff (proposed ⟷ live) | — |
+| `nvimse: Plans` / `New Plan` | draft + execute structured plans step-by-step | — |
+| `nvimse: Big Change` | autonomous feature build + forced-comprehension review | — |
+| `nvimse: Recap Changes` | reverse "explain my git diff" into a `plan.md` narrative | — |
+| `nvimse: PR Sidecar` | render `.nvime/pr.md` — reviewer-facing AI-attribution summary | — |
+| `nvimse: Token + Cost Usage` | per-lane / per-day usage and cost | — |
+| `nvimse: Show Attribution for Line` | which plan/step/provider authored the line under the cursor | — |
+| `nvimse: Git Hooks` | install/uninstall the `prepare-commit-msg` co-author hook | — |
+| `nvimse: Policy Rules` | per-path lane rules (`.nvime/policy.json`) | — |
+| `nvimse: MCP Servers` | manage the merged MCP config + the bundled self-server | — |
+| `nvimse: Check Health` | provider executables, git root, plans, guard events | — |
+| `nvimse: Cancel / Disable / Enable` | operational controls | — |
 
 ### Default keybindings (chords)
 
