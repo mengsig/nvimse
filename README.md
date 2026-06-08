@@ -1,6 +1,6 @@
 # nvimse
 
-`nvimse` — **No Vibe (Coding) In My (VS Code) Editor.** A faithful port of [`nvime`](../nvime), the Neovim discipline plugin, dragged into VS Code under protest. The AI keeps its hands off your code until you tell it exactly where, how, and why — then it does that and not one keystroke more. No sprawl. No mystery edits. No drive-by refactors. No hallucinated helpers. No "oops, I rewrote your repo." This is your editor — the model is a guest, and guests don't touch the knives.
+`nvimse` — **No Vibing In My Shitty (VSCode) Editor.** A faithful port of [`nvime`](../nvime), the Neovim discipline plugin, dragged into VS Code under protest. The AI keeps its hands off your code until you tell it exactly where, how, and why — then it does that and not one keystroke more. No sprawl. No mystery edits. No drive-by refactors. No hallucinated helpers. No "oops, I rewrote your repo.". No bullshit... This is your editor — the model is a guest, and guests don't touch the knives.
 
 > **A note on the venue.** This is the same engine as `nvime`, shipped where the mouse-clickers live. `nvime` reviews a diff with `ga`/`gb` under your fingers without your hand ever leaving home row. `nvimse` reviews the same diff after you've reached for the trackpad, found the CodeLens, squinted, and clicked "✓ Accept." The patches are byte-for-byte identical. The latency between *deciding* and *doing* is not. We measured the agent. We could not measure the modal-editing muscle memory you gave up to read this. nvim > vscode. The benchmark below is the one place they tie — and that's only because `nvimse` literally runs `nvime`'s prompts.
 
@@ -86,9 +86,11 @@ Everything is under the `nvimse:` command palette prefix.
 
 ### Default keybindings (chords)
 
-- `ctrl+k space` — command center
-- `ctrl+k ctrl+e` — edit · `ctrl+k ctrl+a` — ask · `ctrl+k ctrl+f` — quick fix · `ctrl+k ctrl+c` — chat
-- in an active diff: `ctrl+k a` accept · `ctrl+k shift+a` accept-all · `ctrl+k r` reject · `ctrl+k shift+r` reject-all · `ctrl+k ]` / `ctrl+k [` next/prev block
+**Every chord starts with `ctrl+k`** — press `ctrl+k` first, then the key(s) below:
+
+- `space` — command center
+- in an active diff: `a` accept · `shift+a` accept-all · `r` reject · `shift+r` reject-all · `]` / `[` next/prev block
+- `ctrl+e` — edit · `ctrl+a` — ask · `ctrl+f` — quick fix · `ctrl+c` — chat
 
 (In `nvime` these are one `<leader>n` namespace and you never touch a chord. We know. We're sorry.)
 
